@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function prime(){
+        let a = parseInt(prompt("Enter a number"));
+
+if (a <= 1) {
+    document.write("Not a prime number");
+}
+else if (a == 2 || a == 3 || a == 5 || a == 7) {
+    document.write("Prime number");
+}
+else if (a % 2 == 0 || a % 3 == 0 || a % 5 == 0 || a % 7 == 0) {
+    document.write("Not a prime number");
+}
+else {
+    document.write("Prime number");
+}
+
+    }
+    prime()
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+    <script>
+        function fact(){
+            let a=parseInt(prompt("enter a number"));
+        let fact=1;
+        if(a<0){
+            document.write("factorial is not possible")
+        }else{
+            for(let i=1;i<=a;i++){
+                fact=fact*i;
+
+            }
+            document.write("the factorial of" + a + "is" + fact);
+        }
+
+
+        }
+        fact()
+        
+    </script>
+</html>
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function arm(){
+                let a=parseInt(prompt("enter a number"));
+                let temp=a;
+                let sum=0;
+                let digits=a.toString().length;
+                while(temp>0){
+                    let digit=temp%10;
+                    sum+=digit**digits;
+                    temp=Math.floor(temp/10);
+                }
+                if(sum==a){
+                    document.write(a+"is a armstrong number")
+                }else{
+                    document.write(a+"is not a armstrong number")
+                }
+            }
+            arm()
+
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display:flex;
+                justify-content: center;
+                gap:300px;
+                background-color: beige;
+                float: top;
+            }
+            #if{
+                display:flex;
+                justify-content: center;
+
+            }
+            button{
+                box-shadow: 3px black;
+                padding:13px;
+                width:100px;
+                height:100px;
+            }
+            iframe{
+                width:100%;
+                height:600px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <a href="fact.html" target="name" ><button >factorial</button></a>
+            <a href="even.html" target="name"><button >even</button></a>
+            <a href="prime.html" target="name"><button >prime</button></a>
+            <a href="armstrong.html" target="name"><button>armstrong</button></a>
+            
+        </div>
+        <div id="if" >
+            <iframe src="fact.html" name="name"></iframe>
+        </div>
+        
+
+        </script>
+    </body>
+</html>

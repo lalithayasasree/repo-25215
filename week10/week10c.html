@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Largest of Five</title>
+<style>
+body {
+    font-family: Arial;
+    background-color: rgb(220, 220, 246);
+    text-align: center;
+    margin-top: 100px;
+}
+.box {
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+input {
+    margin: 5px;
+    padding: 5px;
+}
+button {
+    padding: 8px;
+    background: rgb(121, 106, 250);
+    color: white;
+    border: none;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Find Largest of 5 Numbers</h2>
+<input type="number" id="n1"><br>
+<input type="number" id="n2"><br>
+<input type="number" id="n3"><br>
+<input type="number" id="n4"><br>
+<input type="number" id="n5"><br><br>
+<button onclick="largest()">Find Largest</button>
+</div>
+<script>
+function largest() {
+    let a = parseInt(document.getElementById("n1").value);
+    let b = parseInt(document.getElementById("n2").value);
+    let c = parseInt(document.getElementById("n3").value);
+    let d = parseInt(document.getElementById("n4").value);
+    let e = parseInt(document.getElementById("n5").value);
+    let max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    if (d > max) max = d;
+    if (e > max) max = e;
+    alert("Largest number is " + max);
+}
+</script>
+</body>
+</html>
